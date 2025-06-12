@@ -49,9 +49,9 @@ git clone https://github.com/your-username/ToDoList-Backend.git
 npm i
 ```
 ## Create .env and Config your key
-DATABASE_URL="postgresql://todolist_owner:npg_ak0CHdYNKJy7@ep-hidden-waterfall-a1gmk5p2-pooler.ap-southeast-1.aws.neon.tech/todolist?sslmode=require"
-PORT=8083
-JWT_SECRET=todolist101
+DATABASE_URL="mysql://youruser:yourpassword@yourhost/yourdbname"
+JWT_SECRET="your_super_secret_key"
+PORT=5000
 
 ## Generate Prisma client:
 ``` bash
