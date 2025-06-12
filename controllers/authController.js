@@ -50,8 +50,14 @@ exports.authSignup = TryCatch(async (req, res, next) => {
     })
     console.log('newUser', newUser);
 
+    // GENERATE TOKEN AFTER SIGNINED
+    const token = jwt.sign(
+        { userID: newUser.userID, email: newUser.email },
+        process.env.JWT_SECRET,
+        { expiresIn: '1d' }
+    )
 
-    res.status(200).json({ status: "SUCCESS", message: "Register already", results: newUser })
+    res.status(200).json({ status: "SUCCESS", message: "Register already", token, results: newUser })
 })
 ////// API Login validate User in DB and Generate TOKEN
 exports.authSignin = TryCatch(async (req, res) => {
