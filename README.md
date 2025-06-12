@@ -44,7 +44,7 @@ This project is built with a React.js frontend and a Node.js + Express backend, 
 ### Clone Repository
 
 ```bash
-git clone https://github.com/your-username/ToDoList-Backend.git
+git clone https://github.com/olliewiranphatDEV/ToDoList-Backend
 
 npm i
 ```
