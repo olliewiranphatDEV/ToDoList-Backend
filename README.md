@@ -34,7 +34,7 @@ This project is built with a React.js frontend and a Node.js + Express backend, 
 
 ## Live App
 
-> [Deployed on Render](https://your-render-url.com)  
+> [Deployed on Render](https://todolist-backend-nvzy.onrender.com)  
 > Neon PostgreSQL Database in production
 
 ---
