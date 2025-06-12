@@ -51,7 +51,7 @@ exports.authSignup = TryCatch(async (req, res, next) => {
     console.log('newUser', newUser);
 
 
-    res.status(200).json({ status: "SUCCESS", message: "Register already", result: newUser })
+    res.status(200).json({ status: "SUCCESS", message: "Register already", results: newUser })
 })
 ////// API Login validate User in DB and Generate TOKEN
 exports.authSignin = TryCatch(async (req, res) => {
