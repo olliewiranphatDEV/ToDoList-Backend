@@ -57,7 +57,9 @@ exports.authSignup = TryCatch(async (req, res, next) => {
         { expiresIn: '1d' }
     )
 
-    res.status(200).json({ status: "SUCCESS", message: "Register already", token, results: newUser })
+    const { password, ...userWithoutPassword } = newUser;
+    res.status(200).json({ status: "SUCCESS", message: "Register already", token, results: userWithoutPassword })
+
 })
 ////// API Login validate User in DB and Generate TOKEN
 exports.authSignin = TryCatch(async (req, res) => {
@@ -90,5 +92,5 @@ exports.authSignin = TryCatch(async (req, res) => {
     const { password, ...userWithoutPassword } = userData
     console.log('userWithoutPassword', userWithoutPassword);
 
-    res.status(200).json({ status: "SUCCESS", message: "SignIn already", token, result: userWithoutPassword })
+    res.status(200).json({ status: "SUCCESS", message: "SignIn already", token, results: userWithoutPassword })
 })
